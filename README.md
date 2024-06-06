@@ -30,3 +30,14 @@ check the GCC/G++ version
 gcc --version
 g++ --version
 ```
+
+Download cuda 10.2
+```bash
+https://developer.download.nvidia.com/compute/cuda/10.2/Prod/local_installers/cuda_10.2.89_440.33.01_linux.run
+```
+
+run cuda 10.2 installation
+```bash
+sudo sh cuda_10.2.89_440.33.01_linux.run
+```
+### Don't forget to uncheck the Cuda driver to avoid driver crashes
