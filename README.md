@@ -1,11 +1,11 @@
 # Cuda_10.2_installation_tutorial_on_Ubuntu_20.04/22.04
-install gcc/g++
+Install gcc/g++
 ```bash
 sudo apt install build-essential
 sudo apt -y install gcc-7 g++-7 gcc-8 g++-8 gcc-9 g++-9
 ```
 
-update-alternatives tool to create list of multiple GCC and G++ compiler alternatives
+Update-alternatives tool to create list of multiple GCC and G++ compiler alternatives
 ```bash
 sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-7 7
 sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-7 7
@@ -15,17 +15,17 @@ sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-9 9
 sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-9 9
 ```
 
-select GCC version by entering relevant selection number (select to 7)
+Select gcc version by entering relevant selection number (select to 7)
 ```bash
 sudo update-alternatives --config gcc
 ```
 
-select G++ version by entering relevant selection number (select to 7)
+Select g++ version by entering relevant selection number (select to 7)
 ```bash
 sudo update-alternatives --config g++
 ```
 
-check the GCC/G++ version
+Check the gcc/g++ version
 ```bash
 gcc --version
 g++ --version
@@ -36,8 +36,27 @@ Download cuda 10.2
 https://developer.download.nvidia.com/compute/cuda/10.2/Prod/local_installers/cuda_10.2.89_440.33.01_linux.run
 ```
 
-run cuda 10.2 installation
+Run cuda 10.2 installation
 ```bash
 sudo sh cuda_10.2.89_440.33.01_linux.run
 ```
 ### Don't forget to uncheck the Cuda driver to avoid driver crashes
+
+Set the cuda 10.2 as default
+```bash
+sudo apt install nano
+nano ~/.bashrc
+```
+
+Add to bashrc, save and exit
+```bash
+export PATH=/usr/local/cuda-10.2/bin:$PATH
+export LD_LIBRARY_PATH=/usr/local/cuda-10.2/extras/CUPTI/lib64:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=/usr/local/cuda-10.2/lib64:$LD_LIBRARY_PATH
+```
+
+Run the bashrc source
+```bash
+source ~/.bashrc
+```
+
