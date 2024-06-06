@@ -48,7 +48,7 @@ sudo apt install nano
 nano ~/.bashrc
 ```
 
-Add to bashrc, save and exit
+Add to bashrc (put it in the last), save and exit
 ```bash
 export PATH=/usr/local/cuda-10.2/bin:$PATH
 export LD_LIBRARY_PATH=/usr/local/cuda-10.2/extras/CUPTI/lib64:$LD_LIBRARY_PATH
