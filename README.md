@@ -1,2 +1,2 @@
-# Cuda-10.2-installation-tutorial-on-Ubuntu-20.04
-Cuda 10.2 installation tutorial on Ubuntu 20.04
+# Cuda_10.2_installation_tutorial_on_Ubuntu_20.04
+> install G++ v7~9
